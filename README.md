@@ -21,5 +21,5 @@
 ### 3. Insert user lists into a table 
 #### - By using MySQL and javaio, insert a bunch of user lists in a txt file into a table. "," delimiter is used.
 #### ![Insert Data1](txtStudentList.PNG)
-#### ![Insert Data2](insertData.PNG)
+#### ![Insert Data2](InsertData.PNG)
 #### ![Insert Data3](userTable.PNG)
