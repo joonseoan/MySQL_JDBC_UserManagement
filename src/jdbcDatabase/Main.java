@@ -136,13 +136,6 @@ public class Main extends Application {
 	
 	String login="";
 	
-	
-
-
-
-	
-	
-	
 	@Override
 	public void start(Stage primaryStage) {
 		// System.out.println(success);
@@ -383,7 +376,7 @@ public class Main extends Application {
 							m_timer.cancel();
 							btnStart.setDisable( false );
 							
-							// ³»°¡ ÀÌ°åÀ¸¸é DB¿¡ Á¡¼ö Ãß°¡
+							// ë‚´ê°€ ì´ê²¼ìœ¼ë©´ DBì— ì ìˆ˜ ì¶”ê°€
 							
 							if( RacingResult.winner == 0 ) {
 								
@@ -457,7 +450,7 @@ public class Main extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 
-				// DB¿¡¼­ Á¡¼ö °¡Á®¿Í¼­ ÆË¾÷Ã¢À¸·Î º¸¿©ÁØ´Ù.
+				// DBì—ì„œ ì ìˆ˜ ê°€ì ¸ì™€ì„œ íŒì—…ì°½ìœ¼ë¡œ ë³´ì—¬ì¤€ë‹¤.
 				
 				int score = getScore( tid.getText() );
 				
@@ -476,7 +469,7 @@ public class Main extends Application {
 
 				
 				
-				// DB¿¡ Å©·¹µ÷ Ãß°¡ÇÏ°í ÆË¾÷Ã¢À¸·Î ¾Ë·ÁÁØ´Ù.
+				// DBì— í¬ë ˆë”§ ì¶”ê°€í•˜ê³  íŒì—…ì°½ìœ¼ë¡œ ì•Œë ¤ì¤€ë‹¤.
 				addCredit();
 				double credit = getCredit( tid.getText() );
 				
@@ -723,7 +716,7 @@ public class Main extends Application {
 		            String credit = tf7.getText();
 		            String score = tf8.getText();
 		            String logo = tf9.getText();
-System.out.println( "----" +  login );					
+		            System.out.println( "----" +  login );					
 					Login li = new Login();
 					userData = li.getData();
 					
@@ -981,7 +974,7 @@ System.out.println( "----" +  login );
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		String DB_URL = "jdbc:mysql://localhost/DBProg32758";
 		String user = "root";
-		String pw = "q1w2e3r4";
+		String pw = "1111";
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet res = null;
@@ -1021,7 +1014,7 @@ System.out.println( sqlselect);
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		String DB_URL = "jdbc:mysql://localhost/DBProg32758";
 		String user = "root";
-		String pw = "q1w2e3r4";
+		String pw = "1111";
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet res = null;
@@ -1067,7 +1060,7 @@ System.out.println( sqlUpdate);
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		String DB_URL = "jdbc:mysql://localhost/DBProg32758";
 		String user = "root";
-		String pw = "q1w2e3r4";
+		String pw = "1111";
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet res = null;
@@ -1110,7 +1103,7 @@ System.out.println( sqlUpdate);
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		String DB_URL = "jdbc:mysql://localhost/DBProg32758";
 		String user = "root";
-		String pw = "q1w2e3r4";
+		String pw = "1111";
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet res = null;
@@ -1152,7 +1145,7 @@ System.out.println( sqlUpdate);
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		String DB_URL = "jdbc:mysql://localhost/DBProg32758";
 		String user = "root";
-		String pw = "q1w2e3r4";
+		String pw = "1111";
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet res = null;
@@ -1191,7 +1184,7 @@ System.out.println( sqlselect);
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		String DB_URL = "jdbc:mysql://localhost/DBProg32758";
 		String user = "root";
-		String pw = "q1w2e3r4";
+		String pw = "1111";
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet res = null;
