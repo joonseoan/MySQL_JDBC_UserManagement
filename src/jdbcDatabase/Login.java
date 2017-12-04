@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import com.mysql.jdbc.PreparedStatement;
 
 public class Login {
-
 	
 	private String lastName = null;
 	private String firstName = null;
@@ -92,7 +91,7 @@ public class Login {
 		return lastName + "," + firstName + "," + groupNum;
 	}
 	
-	/*
+	
 	public void createTable() {
 		try {
 			
@@ -102,7 +101,7 @@ public class Login {
 			
 			String sqlUse = "USE DBProg32758;";
 			stmt.executeUpdate(sqlUse);
-			sql = "CREATE TABLE Users(LastName VARCHAR(20), FirstName VARCHAR(20), GroupS VARCHAR(20), Login VARCHAR(50), Password VARCHAR(50), PreferedCar VARCHAR(20), Credit VARCHAR(20), Score VARCHAR(20), Logo VARCHAR(20));";
+			sql = "CREATE TABLE idpassword(LastName VARCHAR(20), FirstName VARCHAR(20), GroupS VARCHAR(20), Login VARCHAR(50), Password VARCHAR(50), PreferedCar VARCHAR(20), Credit VARCHAR(20), Score VARCHAR(20), Logo VARCHAR(20));";
 			stmt.executeUpdate(sql);
 
 			stmt.close();
@@ -126,10 +125,10 @@ public class Login {
 			String sqlUse = "USE DBProg32758;";
 			stmt.executeUpdate(sqlUse);
 			
-			String sqlInsert = "INSERT INTO Users(LastName, FirstName, GroupS) VALUES ('An', 'Joon', '3');";
+			String sqlInsert = "INSERT INTO idpassword(LastName, FirstName, GroupS) VALUES ('An', 'Joon', '3');";
 			stmt.executeUpdate(sqlInsert);
 			
-			sqlInsert = "INSERT INTO Users(LastName, FirstName, GroupS) VALUES ('Sun', 'Jinuk', '3');";
+			sqlInsert = "INSERT INTO idpassword(LastName, FirstName, GroupS) VALUES ('Sun', 'Jinuk', '3');";
 			stmt.executeUpdate(sqlInsert);
 			
 			stmt.close();
@@ -141,7 +140,7 @@ public class Login {
 			System.out.println(e);
 		}
 
-	}*/
+	}
 	
 public boolean updateTable() {
 		
@@ -154,7 +153,7 @@ public boolean updateTable() {
 			String sqlUse = "USE DBProg32758;";
 			stmt.executeUpdate(sqlUse);
 			
-			String sqlUpdate = "UPDATE idPassword SET Login = ?, Password = ?, PreferedCar = ?, Credit = ?, Score = ?, Logo = ? WHERE LastName = ? && FirstName=? && GroupS = ?";
+			String sqlUpdate = "UPDATE idpassword SET Login = ?, Password = ?, PreferedCar = ?, Credit = ?, Score = ?, Logo = ? WHERE LastName = ? && FirstName=? && GroupS = ?";
 			ps = (PreparedStatement) con.prepareStatement(sqlUpdate);
 			
 			
@@ -196,7 +195,7 @@ public boolean updateTable() {
 			con = DriverManager.getConnection(DB_URL, user, pw);
 			stmt = con.createStatement();
 			
-			String sqlselect = "select * from Users;";	
+			String sqlselect = "select * from idpassword;";	
 			res = stmt.executeQuery(sqlselect);
 			
 			while(res.next())
@@ -224,75 +223,8 @@ public boolean updateTable() {
 		return lg;	
 	}
 	
-	/*
 	
-	public void dataWrite(ArrayList<String> data)
-	{
-		try 
-		{
-			File file = new File("users.txt");
-			
-			if (!file.exists())
-			{
-				file.createNewFile();
-			}
-			
-			FileWriter fw = new FileWriter(file.getAbsoluteFile());
-			BufferedWriter bw = new BufferedWriter(fw);
-			
-			for (int i = 0; i < data.size(); i++)
-			{
-				bw.write(data.get(i));
-				bw.newLine();
-			}
-			
-			bw.close();
-			fw.close();
-		}
-		catch (Exception ie)
-		{
-			System.out.println(ie);
-		}
-		
-	}
-
-	public ArrayList<String> readFile()
-	{
-		ArrayList<String> al = new ArrayList<String>();
-		
-		try {
-			
-			File file = new File("users.txt");
-
-			if (!file.exists()) {
-				throw new FileNotFoundException("File ....does not exists.");
-			}
-
-			FileReader fr = new FileReader(file.getAbsoluteFile());
-			BufferedReader br = new BufferedReader(fr);
-
-			String s;
-			
-			while ((s = br.readLine()) != null) {
-				
-				al.add(s);
-				System.out.println(s);
-				System.out.println(al.size());
-			}
-
-			br.close();
-			fr.close();
-			
-		} catch (IOException ie) {
-			System.out.println("Failed to Read");
-		}
-		
-		return al;
-	}
-	*/
 	
-
-	/*
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Login lg = new Login();
@@ -301,9 +233,9 @@ public boolean updateTable() {
 		
 		//System.out.println();
 		
-		//lg.createTable();
-	//	lg.inputData();
+		lg.createTable();
+		lg.inputData();
 
 	}
-	*/
+	
 }
