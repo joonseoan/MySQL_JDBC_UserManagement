@@ -1,4 +1,4 @@
-# [Car Game]
+# [Car Racing Game]
   - This game is created by using MySQL and JDBC.
   - The user must sign up with login ID and password.
   - The game starts when the user verifies his/her login ID and password in database. 
