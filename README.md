@@ -34,3 +34,8 @@
 #### - Update the password field with "xxxx" and and then lock the account when the user types incorrect password 3 times in a raw.
 #### ![Account lockup message](lockMessage.PNG)
 #### ![XXXX password field](xxxx.PNG)
+######
+### 6. Start the Car Racing game when the user types correct login ID and password.
+#### - While playing the game, the user is able to increase credit and listen to music.
+#### ![Account Login](userLogin.PNG)
+#### ![XXXX password field](startGame.PNG)
